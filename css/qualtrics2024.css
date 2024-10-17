@@ -1269,7 +1269,9 @@ div #Footer {
   max-height: 100%;
   max-width: 100%;
   padding: var(--space-responsive-sm) var(--space-responsive-md);
+  position: sticky;
   width: 100%;
+  top: var(--space-responsive-xxl);
   z-index: 10;
 }
 .Skin #ProgressBar > div::before {
