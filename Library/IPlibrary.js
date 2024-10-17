@@ -840,96 +840,9 @@ var formatWC = function (selectors) {
 
 //6) theme formatting and functionality:
 //menubar scroll shadow
-var menuScroll = function () {
-    //add -- shadow when scrolling 
 
-    jQuery(".Skin").scroll(function () {
-
-        //selectors:
-        let logo = jQuery("#LogoContainer");
-        let progressBar = jQuery(".ProgressBarContainer");
-
-        if (jQuery(".Skin").scrollTop() != 0) {
-            //if the window is not at the scroll top
-
-            //add box shadow
-            progressBar.css('-webkit-box-shadow', 'rgba(0, 0, 0, 0.3) 0px 1px 4px 0px');
-            progressBar.css('-moz-box-shadow', 'rgba(0, 0, 0, 0.3) 0px 1px 4px 0px');
-            //progress bar
-
-            logo.css('-webkit-box-shadow', 'rgba(0, 0, 0, 0.3) 0px 1px 4px 0px');
-            logo.css('-moz-box-shadow', 'rgba(0, 0, 0, 0.3) 0px 1px 4px 0px');
-            logo.css("box-shadow", "rgba(0, 0, 0, 0.3) 0px 1px 4px 0px");
-            //header
-
-            //move the progress bar up
-            progressBar.animate({
-                top: '35px',
-            }, 100);
-
-            //make the header smaller
-            jQuery(".Skin #Logo img").animate({
-                maxHeight: '25px'
-            }, 100)
-
-
-        } else {
-            //otherwise
-            //remove boxshadow
-            progressBar.css('-webkit-box-shadow', 'none');
-            progressBar.css('-moz-box-shadow', 'none');
-            //prgressbar
-
-            logo.css("box-shadow", "none");
-            logo.css("-webkit-box-shadow", "none");
-            logo.css("-moz-box-shadow", "none");
-            //header
-
-            //apply default size
-            progressBar.stop(true, true).css("top", "60px");
-            //progressbar
-
-            jQuery(".Skin #Logo img").stop(true, true).css("max-height", "50px");
-            //header
-        }
-    });
-
-};
 
 //load page on scroll top:
-var loadScrollPosition = function (scrollposition) {
-    //scrollposition is an integer
-
-    jQuery(".Skin").scrollTop(scrollposition);
-};
-
-
-//stop the scroll from hcnaging when  the question is clicked
-var setScroll = function () {
-
-    let scrollposition = "";
-    //variable to track the scroll position
-
-    jQuery(".QuestionBody").scroll(function () {
-        scrollposition = jQuery(".QuestionBody").scrollLeft()
-
-    });
-    //track the scroll position
-
-    let lockscroll = function () {
-        jQuery(".QuestionBody").scrollLeft(scrollposition)
-    }; // set the scroll position
-
-    jQuery(".ChoiceStructure").on({
-        click: function () {
-            lockscroll();
-        },
-        focus: function () {
-            lockscroll();
-        }
-    })
-
-};
 
 //shortcut labels for nav buttons:
 var navlabels = function () {
