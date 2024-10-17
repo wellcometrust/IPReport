@@ -1,6 +1,10 @@
 # NPM
 npm-debug.log
 node_modules/
+html/
+build/
+config/
+compose.yaml
 
 # Build/output files
 .dist/
