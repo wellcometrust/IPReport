@@ -1,0 +1,95 @@
+@import '../node_modules/@wellcometrust/design-system/dist/core.css';
+@import '../node_modules/@wellcometrust/design-system/dist/theme.css';
+
+.Skin {
+    #LogoContainer {
+        background: var(--color-grey-60);
+        margin: 0;
+        padding: var(--space-responsive-md);
+        position: sticky;
+        z-index: 10;
+    }
+
+    #Logo {
+        height: var(--space-static-xxl);
+        margin: 0;
+        width: var(--space-static-xxl);
+
+        img {
+            box-shadow: none;
+        }
+    }
+
+    #ProgressBar {
+        background: var(--color-grey-60);
+        border-top: 1px solid var(--color-grey-40);
+        margin: 0;
+        max-height: 100%;
+        max-width: 100%;
+        padding: var(--space-responsive-sm) var(--space-responsive-md);
+        position: sticky;
+        width: 100%;
+        top: --space-responsive-xxl;
+        z-index: 10;
+
+        > div {
+            &::before {
+                color: var(--color-white);
+                content: 'Report progress';
+                display: block;
+                margin-bottom: var(--space-static-xs);
+                width: 100%;
+
+            }
+        }
+
+        .ProgressBarContainer {
+            background: var(--color-grey-60);
+            position: relative;
+            top: 0;
+            width: 100%;
+            
+        }
+
+        .ProgressBarFillContainer {
+            background-color: -var(--color-grey-50);
+            border-radius: 2px;
+            height: var(--space-static-xs);
+           
+        }
+
+        .ProgressBarFill {
+            background-color: var(--color-blue-20);
+            border-radius: 2px;
+            height: var(--space-static-xs);
+        }
+
+        tr td:first-child, tr td:last-child{
+            font-size: 0 !important;
+            padding: 0 !important;
+            visibility: hidden;
+            width: 0 !important;
+        }
+    }
+
+    #Buttons {
+        #NextButton, #PrevButton {
+            background: var(--color-blue-70);
+            border: 1px solid var(--color-blue-70);
+            bottom: 0;
+            color: var(--color-white);
+            font-size: var(--font-size-sm);
+            margin: var(--space-responsive-sm) 0;
+            padding: var(--space-responsive-sm) var(--space-responsive-md);
+            top: 0;
+
+            &:hover, &:active {
+                background: var(--color-blue-60);
+                box-shadow: none;
+                border: 1px solid var(--color-blue-60);
+                bottom: 0;
+                top: 0;
+            }
+        }
+    }
+}
