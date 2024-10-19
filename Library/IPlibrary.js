@@ -2086,6 +2086,8 @@ var carry6 = function (answerlist) {
 //3) 10 Revenue calctable formatting:
 var revenueFormatting = function (parentarray) {
 
+    console.log("parent array: ", parentarray);
+
     jQuery(".ChoiceStructure tbody tr").each(function () {
         //for each table row:
         let inputs = jQuery(this);
